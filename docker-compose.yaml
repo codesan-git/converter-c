@@ -1,0 +1,8 @@
+# Development
+services:
+  personal-website:
+    image: converter-c:latest
+    container_name: converter-c
+    restart: unless-stopped
+    ports:
+      - "5173:3000" #<exposed port>:<container port>
