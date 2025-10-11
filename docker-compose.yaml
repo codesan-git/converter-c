@@ -4,5 +4,6 @@ services:
     image: converter-c:latest
     container_name: converter-c
     restart: unless-stopped
+    command: bun x serve -l ${PORT} dist
     ports:
-      - "5173:3000" #<exposed port>:<container port>
+      - "${PORT}:${PORT}"
