@@ -1,5 +1,5 @@
 {
-  "name": "csvtojson",
+  "name": "toolsbycodesan",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -12,6 +12,7 @@
   "dependencies": {
     "@radix-ui/react-slot": "^1.2.3",
     "@tailwindcss/vite": "^4.1.14",
+    "@tanstack/react-router": "^1.133.22",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "lucide-react": "^0.545.0",
@@ -23,6 +24,8 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.36.0",
+    "@tanstack/router-devtools": "^1.133.22",
+    "@tanstack/router-plugin": "^1.133.22",
     "@types/node": "^24.7.0",
     "@types/papaparse": "^5.3.16",
     "@types/react": "^19.1.16",
