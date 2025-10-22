@@ -1,10 +1,11 @@
-import CsvToJson from "./components/CsvToJson";
+import CsvComparition from "./components/CsvComparition";
 
 function App() {
 
   return (
     <>
-      <CsvToJson />
+      {/* <CsvToJson /> */}
+      <CsvComparition />
     </>
   )
 }
