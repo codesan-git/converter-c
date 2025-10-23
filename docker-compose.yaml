@@ -3,7 +3,7 @@ services:
     image: converter-c:latest
     container_name: converter_c
     restart: unless-stopped
-    command: bun x serve -l 0.0.0.0:${PORT} dist
+    command: bun x serve -l ${PORT} dist
     ports:
       - "${PORT}:${PORT}"
     networks:
