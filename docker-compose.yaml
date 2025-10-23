@@ -1,6 +1,6 @@
 # Development
 services:
-  personal-website:
+  converter-c:
     image: converter-c:latest
     container_name: converter-c
     restart: unless-stopped

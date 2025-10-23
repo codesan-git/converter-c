@@ -2,7 +2,8 @@
 FROM oven/bun:latest AS builder
 WORKDIR /app
 COPY package.json bun.lock ./
-RUN bun install --frozen-lockfile
+RUN bun pm cache rm
+RUN bun install --no-cache
 COPY . .
 RUN bun run build
 
@@ -10,6 +11,6 @@ RUN bun run build
 FROM oven/bun:latest AS runner
 WORKDIR /app
 COPY --from=builder /app/dist ./dist
+CMD ["bun", "x", "serve", "-l", "${PORT}", "dist"]
 
-# Default serve port
-CMD ["bun", "x", "serve", "-l", "3000", "dist"]
+## change 3600 to your internal port
