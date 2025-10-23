@@ -1,9 +1,8 @@
-# Development
 services:
-  personal-website:
+  converter_c:
     image: converter-c:latest
-    container_name: converter-c
+    container_name: converter_c
     restart: unless-stopped
-    command: bun x serve -l ${PORT} dist
+    command: bun x serve -l 0.0.0.0:${PORT} dist
     ports:
       - "${PORT}:${PORT}"
