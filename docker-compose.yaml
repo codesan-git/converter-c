@@ -6,3 +6,9 @@ services:
     command: bun x serve -l 0.0.0.0:${PORT} dist
     ports:
       - "${PORT}:${PORT}"
+    networks:
+      - application_network
+
+networks:
+  application_network:
+    external: true
