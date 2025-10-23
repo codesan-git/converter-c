@@ -1,11 +1,12 @@
+# Development
 services:
-  converter_c:
+  personal-website:
     image: converter-c:latest
-    container_name: converter_c
+    container_name: converter-c
     restart: unless-stopped
-    command: bun x serve -l ${PORT} dist
-    ports:
-      - "${PORT}:${PORT}"
+    command: bun x serve -l 3600 dist
+    expose:
+      - "3600"
     networks:
       - application_network
 
