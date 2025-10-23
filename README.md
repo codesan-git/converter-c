@@ -49,7 +49,7 @@ http://localhost:5173
   Make sure your reverse proxy like `Nginx` or `Caddy` is in the same network:
   ```yaml
   services:
-    personal-website:
+    converter-c:
       image: converter-c:latest
       container_name: converter-c
       restart: unless-stopped

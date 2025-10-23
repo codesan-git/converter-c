@@ -11,6 +11,6 @@ RUN bun run build
 FROM oven/bun:latest AS runner
 WORKDIR /app
 COPY --from=builder /app/dist ./dist
-CMD ["bun", "x", "serve", "-l", "3600", "dist"]
+CMD ["bun", "x", "serve", "-l", "${PORT}", "dist"]
 
 ## change 3600 to your internal port
