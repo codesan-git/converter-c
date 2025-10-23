@@ -4,7 +4,7 @@ services:
     image: converter-c:latest
     container_name: converter-c
     restart: unless-stopped
-    command: bun run serve
+    command: bun x serve -l 3600 dist
     expose:
       - "3600"
     networks:
